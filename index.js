@@ -25,7 +25,9 @@ app.delete('/movies/:id', (req, res) => {
     res.send(`Delete Movie with ID ${req.params.id}`)
 })
 
-sequelize.authenticate().then(()=>{
+sequelize
+.sync({ alter: true })
+.then(()=>{
     app.listen(port,()=> console.log(`Database connected successfully and app listening on port ${port}`))
   })
   .catch((error)=>{

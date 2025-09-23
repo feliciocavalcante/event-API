@@ -3,7 +3,7 @@
   const sequelize = require('../config/database'); // Import the Sequelize configuration
 
   const User = sequelize.define('User', {
-    username: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
@@ -11,6 +11,14 @@
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+   role: {
+      type: DataTypes.STRING,
+      allowNull: false,
     },
   });
 
