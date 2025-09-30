@@ -23,10 +23,10 @@ const Movie = sequelize.define('Movie', {
         allowNull: false
     },
      duration: {
-        type: DataTypes.INET,
+        type: DataTypes.INTEGER,
         allowNull: false
     },
-     agerating: {
+     ageRating: {
         type: DataTypes.FLOAT,
         allowNull: false
     },
@@ -36,7 +36,8 @@ const Movie = sequelize.define('Movie', {
     },
      isActive: {
         type: DataTypes.BOOLEAN,
-        allowNull: false
+        allowNull: false,
+        defaultValue: true,
     },
 
 
